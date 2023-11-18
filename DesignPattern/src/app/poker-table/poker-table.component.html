@@ -1,0 +1,13 @@
+
+<div class="d-flex flex-row mb-3 back row" >
+    <div class=" d-flex col-sm-6 justify-content-center">Name</div>
+    <div class="col-sm-2">Seats</div>
+    <div class="col-sm-2">Bet</div>
+    <div class="col-sm-2">Rake </div>
+</div>
+<div class="d-flex flex-row mb-3  row" [ngClass]="i%2==1?'back':'back-2'" *ngFor="let table of tables; index as i;">
+    <div class=" d-flex col-sm-6 justify-content-center">{{table.name}}</div>
+    <div class="col-sm-2">{{table.numSeats}}</div>
+    <div class="col-sm-2">{{table.bet}}</div>
+    <div class="col-sm-2">{{table.rake}} </div>
+</div>
